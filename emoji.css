@@ -1,0 +1,171 @@
+body {
+    background: rgb(10, 10, 10);
+    color: #fff;
+    font-family: sans-serif;
+  }
+  
+  .scores-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .total-score {
+    margin-right: 20px;
+    margin: 20px;
+    text-align: center;
+    background: #ccc;
+    padding: 20px;
+    color: #000;
+    border-radius: 10px;
+  }
+  
+  .time {
+    margin-right: 20px;
+    margin: 20px;
+    text-align: center;
+    background: #ccc;
+    padding: 20px;
+    color: #000;
+    border-radius: 10px;
+  }
+  
+  .grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .square {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    background: rgb(61, 61, 61);
+    border-radius: 50%; /* This makes the square circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px; /* Size for emoji display */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .square:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  .emoji {
+    background-color: transparent;
+    background-image: none;
+  }
+  /* Winning celebration styles */
+.win-celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    color: gold;
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  .win-celebration h1 {
+    text-shadow: 0 0 10px gold;
+    margin-bottom: 2rem;
+  }
+  
+  .party-popper {
+    position: absolute;
+    font-size: 4rem;
+    animation: float 2s infinite alternate;
+  }
+  
+  .party-popper.left {
+    left: 10%;
+    bottom: 20%;
+  }
+  
+  .party-popper.right {
+    right: 10%;
+    bottom: 20%;
+  }
+  
+  .confetti-top {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0) translateX(-50%); }
+    100% { transform: translateY(-20px) translateX(-50%); }
+  }
+
+  /* Losing message styles */
+.lose-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  color: #ff4d4d;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.lose-message h1 {
+  text-shadow: 0 0 10px #ff0000;
+  margin-bottom: 1rem;
+}
+
+.lose-message p {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.sad-face {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: shake 0.5s infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
